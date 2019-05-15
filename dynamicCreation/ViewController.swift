@@ -9,25 +9,73 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     
-    var label  = UILabel()
+    
+    @IBOutlet weak var textFieldX: UITextField!
+    
+    
+    
+    @IBAction func buttonX1(_ sender: Any) {
+        let numX = Int(textFieldX.text!)!
+        var yAxisX = 250
+        for i in 1...numX
+        {
+            print(i)
+            let labelX = UILabel()
+            
+            labelX.frame = CGRect(x: 50, y: yAxisX, width:40 , height: 40)
+            labelX.backgroundColor = UIColor.green
+            labelX.text = "iPhone"
+            labelX.textColor = UIColor.blue
+            self.view.addSubview(labelX)
+            yAxisX = yAxisX + 100
+        }
+    }
+    
+    @IBAction func buttonX2(_ sender: Any) {
+        let numX = Int(textFieldX.text!)!
+        var yaxisX = 200
+        for i in 1...numX
+        {
+            print(i)
+            let textFieldX = UITextField()
+            
+            textFieldX.frame = CGRect(x : 150 ,y : yaxisX, width :40 ,height : 40)
+            textFieldX.backgroundColor = UIColor.red
+            textFieldX.text = "Mac"
+            textFieldX.textColor = UIColor.orange
+            self.view.addSubview(textFieldX)
+            yaxisX = yaxisX + 200
+        }
+    }
+    
+    
+    @IBAction func buttonX3(_ sender: Any) {
+        let numX = Int(textFieldX.text!)!
+        var yaxisX = 200
+        for i in 1...numX
+        {
+            print(i)
+            let imageViewX = UIImageView()
+            imageViewX.frame = CGRect(x: 250, y:  yaxisX, width: 40, height: 40)
+            imageViewX.image = UIImage(named: "apple")
+            self.view.addSubview(imageViewX)
+            yaxisX = yaxisX + 200
+        }
+    }
+    
+    
+    
+    
+    
+
+   
     
     override func viewDidLoad() {
-        
-        label.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
-        label.backgroundColor = .red
-        label.textAlignment = .center
-        label.text = "Dynamic"
-        label.textColor =  UIColor.green
-        self.view.addSubview(label)
-        
-        
-        
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    
 }
 
