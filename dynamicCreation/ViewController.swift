@@ -11,10 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     
     
+
+    
+    
     @IBOutlet weak var textFieldX: UITextField!
     
-    
-    
+        
+        
+        
     @IBAction func buttonX1(_ sender: Any) {
         let numX = Int(textFieldX.text!)!
         var yAxisX = 250
@@ -30,43 +34,47 @@ class ViewController: UIViewController {
             self.view.addSubview(labelX)
             yAxisX = yAxisX + 100
         }
+        
     }
     
+        
+        
     @IBAction func buttonX2(_ sender: Any) {
+        
         let numX = Int(textFieldX.text!)!
-        var yaxisX = 200
+        var yaxisX = 250
         for i in 1...numX
         {
             print(i)
             let textFieldX = UITextField()
             
-            textFieldX.frame = CGRect(x : 150 ,y : yaxisX, width :40 ,height : 40)
+            textFieldX.frame = CGRect(x : 175 ,y : yaxisX, width :40 ,height : 40)
             textFieldX.backgroundColor = UIColor.red
-            textFieldX.text = "Mac"
-            textFieldX.textColor = UIColor.orange
+            textFieldX.text = ""
+            textFieldX.textColor = UIColor.green
             self.view.addSubview(textFieldX)
-            yaxisX = yaxisX + 200
+            yaxisX = yaxisX + 100
         }
     }
     
-    
+        
+        
+        
     @IBAction func buttonX3(_ sender: Any) {
+        
         let numX = Int(textFieldX.text!)!
-        var yaxisX = 200
+        var yaxisX = 250
         for i in 1...numX
         {
             print(i)
             let imageViewX = UIImageView()
-            imageViewX.frame = CGRect(x: 250, y:  yaxisX, width: 40, height: 40)
+            imageViewX.frame = CGRect(x: 300, y:  yaxisX, width: 40, height: 40)
             imageViewX.image = UIImage(named: "apple")
             self.view.addSubview(imageViewX)
-            yaxisX = yaxisX + 200
+            yaxisX = yaxisX + 100
         }
+        
     }
-    
-    
-    
-    
     
 
    
